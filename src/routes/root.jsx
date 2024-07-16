@@ -1,5 +1,6 @@
-import Login from "../components/Login/Login";
-import SignUp from "../components/Login/Signup";
+import Dashboard from "../pages/private/Dashboard/Dashboard";
+import Login from "../pages/public/Login/Login";
+import Signup from "../pages/public/Signup/Signup";
 
 export const AppRoutes = [
   {
@@ -8,6 +9,7 @@ export const AppRoutes = [
   },
   {
     path: "/signup",
-    element: <SignUp />,
+    element: <Signup />,
   },
+  { path: "/admin", element: <Dashboard /> },
 ];

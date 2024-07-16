@@ -2,39 +2,51 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { GiPadlock } from "react-icons/gi";
 import { MdOutlineEmail } from "react-icons/md";
-import { CgProfile } from "react-icons/cg";
-import { useState } from "react";
+import { PiHandWavingFill } from "react-icons/pi";
+import logo from "../../../assets/images/logo.png";
+import "./Login.css";
+import image from "../../../assets/images/leave-management.svg";
 
 const Login = () => {
-  const [action, setaction] = useState("login");
   const navigate = useNavigate();
+
   return (
     <div className="container">
       <form className="form">
-        <h1>LEAVE APPLICATION</h1>
-        <br></br>
-        <br></br>
-        <br></br>
+        <div className="welcome">
+          <h1>Welcome back</h1>
+          <PiHandWavingFill className="waving-icon" />
+        </div>
+        <img src={logo} alt="logo" className="logo" />
+
         <div className="email-field">
           <label htmlFor="">Email</label>
-          <input type="text" name="name" id="" className="email" />
+          <input
+            type="text"
+            name="email"
+            className="email"
+            placeholder="enter your email"
+          />
           <MdOutlineEmail className="email-icon" />
         </div>
-        <br></br>
-        <br></br>
+
         <div className="padlock-field">
           <label htmlFor="">Password</label>
-          <input type="text" name="name" id="" className="password" />
+          <input
+            type="text"
+            name="password"
+            className="password"
+            placeholder="enter your password"
+          />
           <GiPadlock className="padlock" />
         </div>
-        <br></br>
-        <br></br>
+
         <div className="send">
           <button type="submit" className="submit">
-            login
+            Login
           </button>
         </div>
-        <br></br>
+
         <div className="send">
           <div className="signup">
             <span
@@ -45,7 +57,6 @@ const Login = () => {
               signup?
             </span>
           </div>
-          <br></br>
 
           <div className="forgot-password">
             lost password?<span>click-here</span>
